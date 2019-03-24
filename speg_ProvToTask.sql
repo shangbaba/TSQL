@@ -12,8 +12,8 @@ WHEN NOT MATCHED BY TARGET THEN
 	INSERT (Name, Description, Category_ID)
 	VALUES (SOURCE.Name, SOURCE.Description, SOURCE.Cat_ID)
 OUTPUT $action,
-	INSERTED.Name as newTask,
-	INSERTED.Description as newDescription,
-	INSERTED.Category_ID as newCategory;
+	INSERTED.Name as TaskAdded,
+	INSERTED.Description as DescriptionAdded,
+	INSERTED.Category_ID as CategoryAdded;
 
 --EXEC speg_ProvToTask
