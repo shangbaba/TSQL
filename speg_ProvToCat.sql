@@ -1,4 +1,4 @@
-CREATE PROCEDURE speg_ProvToCat
+ALTER PROCEDURE speg_ProvToCat
 AS
 
 WITH dedupedCat AS (SELECT DISTINCT Category FROM Provision)
@@ -9,7 +9,7 @@ WHEN NOT MATCHED BY TARGET THEN
 	INSERT (name)
 	VALUES (SOURCE.Category)
 OUTPUT $action,
-	INSERTED.name as newCategory;
+	INSERTED.name as CategoryAdded;
 
 --TRUNCATE TABLE Category
 --EXEC speg_ProvToCat
