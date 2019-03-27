@@ -1,4 +1,4 @@
-CREATE PROCEDURE speg_ProcToActivity
+CREATE PROCEDURE speg_ProvToActivity
 AS
 
 WITH ProcActivity AS (
