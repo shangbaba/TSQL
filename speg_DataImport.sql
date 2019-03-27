@@ -4,5 +4,5 @@ EXEC speg_ProvisionImport
 EXEC speg_ProvToCat
 EXEC speg_ProvToTask
 EXEC speg_TaskToBudget
-EXEC speg_ProcToActivity
+EXEC speg_ProvToActivity
 GO
