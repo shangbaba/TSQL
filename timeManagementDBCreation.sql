@@ -46,7 +46,7 @@ CREATE TABLE Activity
 	Task_ID int NOT NULL,
 	StartTime datetime NOT NULL,
 	EndTime datetime  NOT NULL,
-	Duration time NOT NULL,
+	Duration time(0) NOT NULL,
 	CONSTRAINT PK_ActivityID PRIMARY KEY CLUSTERED (ActivityID ASC),
 	CONSTRAINT FK_TaskActivity FOREIGN KEY (Task_ID) REFERENCES Task (TaskID)
 )
@@ -59,7 +59,7 @@ CREATE TABLE Provision
 	Description nvarchar(100),
 	StartTime datetime NOT NULL,
 	EndTime datetime NOT NULL,
-	Duration time NOT NULL,
+	Duration time(0) NOT NULL,
 	Note nvarchar(250),
 	Category nvarchar(50),
 	CONSTRAINT PK_ProvisionID PRIMARY KEY CLUSTERED (ProvisionID ASC)
